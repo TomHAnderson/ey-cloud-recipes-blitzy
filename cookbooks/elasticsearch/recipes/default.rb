@@ -37,7 +37,7 @@ if ['util'].include?(node[:instance_role])
   Chef::Log.info "Updating Sun JDK"
   package "dev-java/icedtea-bin" do
     version "7.2.4.7"
-    action :upgrade
+    action :install
   end
 
   directory "/usr/lib/elasticsearch-#{node[:elasticsearch_version]}" do
