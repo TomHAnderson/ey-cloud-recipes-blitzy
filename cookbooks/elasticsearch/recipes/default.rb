@@ -36,8 +36,8 @@ if ['util'].include?(node[:instance_role])
   # https://github.com/engineyard/ey-cloud-recipes/issues/135
   Chef::Log.info "Updating Sun JDK"
   package "dev-java/icedtea-bin" do
-    version "7.2.3.3"
-    action :install
+    version "7.2.3.3 ~amd64"
+    action :upgrade
   end
 
   directory "/usr/lib/elasticsearch-#{node[:elasticsearch_version]}" do
