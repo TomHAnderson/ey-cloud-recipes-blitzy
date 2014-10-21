@@ -36,7 +36,7 @@ if ['util'].include?(node[:instance_role])
   # https://github.com/engineyard/ey-cloud-recipes/issues/135
   Chef::Log.info "Updating Sun JDK"
   package "dev-java/icedtea-bin" do
-    version "7.2.3.3 ~amd64"
+    version "7.2.3.3"
     action :upgrade
   end
 
